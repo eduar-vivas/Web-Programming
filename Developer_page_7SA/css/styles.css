@@ -1,0 +1,81 @@
+:root
+{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    font-family: Krub, Helvetica, sans-serif ;
+}
+
+html
+{
+    /* para poner conversion para web */
+    font-size: 62.5%;
+}
+body
+{
+    font-size: 16px;
+}
+
+.titulo
+{
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.titulo span 
+{
+    font-size: 2rem;
+}
+
+.navgacion-principal
+{
+    background-color: var(--secundario);
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg
+{
+    background-color: var(--secundario);
+}
+
+.navgacion-principal a
+{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    /*quitar subrayado*/
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.navgacion-principal
+{
+    /*padding: 1rem;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content para filas y align-items para columnas*/
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* al menos tiene 768px (tablet) */
+@media (min-width: 768px)
+{
+    .navgacion-principal
+    {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navgacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro)
+}
+
