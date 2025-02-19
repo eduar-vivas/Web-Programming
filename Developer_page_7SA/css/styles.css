@@ -84,6 +84,8 @@ body
     color: var(--oscuro);
 }
 .hero{
+    /* "../"
+    para salir de una carpeta a otra  */
     background-image: url("../img/hero.jpg");
     background-repeat: no-repeat;
     /*cubre la imagen con el tamaño posible*/
