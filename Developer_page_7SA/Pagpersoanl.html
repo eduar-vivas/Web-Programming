@@ -1,63 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Sidebar Menu</title>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Garantiza la compatibilidad con versiones antiguas de IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsive en dispositivos móviles -->
+    <title>Responsive Sidebar Menu</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    
+    <!-- Enlace al archivo de estilos CSS externo para darle diseño a la página -->
     <link rel="stylesheet" href="style.css">
-    <!-- Box Icons -->
-    <link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Enlace a la librería de iconos Boxicons para usar iconos personalizados -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
+    <!-- Contenedor principal que agrupa la barra lateral y el contenido -->
     <div class="main">
+        
+        <!-- Barra lateral de navegación que contiene los enlaces del menú -->
         <div class="side-navbar">
             <ul>
                 <li><a href="#">
+                    <!-- Ícono y texto del dashboard (nombre de la aplicación) -->
                     <span class="icon"><i class='bx bxs-dashboard'></i></span>
                     <span class="text"><h2>Carpool</h2></span>
                 </a></li>
+                
+                <!-- Elementos del menú de navegación con iconos y etiquetas -->
                 <li><a href="#">
-                    <span class="icon"><i class='bx bxs-home-circle' ></i></span>
-                    <span class="text">Home</span>
+                    <span class="icon"><i class='bx bxs-home-circle' ></i></span> <!-- Ícono de inicio -->
+                    <span class="text">Home</span> <!-- Texto del enlace -->
                 </a></li>
                 <li><a href="#">
-                    <span class="icon"><i class='bx bxs-message-square-detail' ></i></span>
+                    <span class="icon"><i class='bx bxs-message-square-detail' ></i></span> <!-- Ícono de mensajes -->
                     <span class="text">Message</span>
                 </a></li>
                 <li><a href="#">
-                    <span class="icon"><i class='bx bxs-message-rounded-detail' ></i></span>
+                    <span class="icon"><i class='bx bxs-message-rounded-detail' ></i></span> <!-- Ícono de chat -->
                     <span class="text">Chat</span>
                 </a></li>
                 <li><a href="#">
-                    <span class="icon"><i class='bx bxs-user' ></i></span>
+                    <span class="icon"><i class='bx bxs-user' ></i></span> <!-- Ícono de perfil -->
                     <span class="text">Profile</span>
                 </a></li>
                 <li><a href="#">
-                    <span class="icon"><i class='bx bxs-cloud-upload' ></i></span>
+                    <span class="icon"><i class='bx bxs-cloud-upload' ></i></span> <!-- Ícono de subida de archivos -->
                     <span class="text">Upload</span>
                 </a></li>
                 <li><a href="#">
-                    <span class="icon"><i class='bx bxs-cog' ></i></span>
+                    <span class="icon"><i class='bx bxs-cog' ></i></span> <!-- Ícono de configuración -->
                     <span class="text">Setting</span>
                 </a></li>
                 <li><a href="#">
-                    <span class="icon"><i class='bx bxs-log-out' ></i></span>
+                    <span class="icon"><i class='bx bxs-log-out' ></i></span> <!-- Ícono de cierre de sesión -->
                     <span class="text">Log-Out</span>
                 </a></li>
             </ul>
         </div>
+        
+        <!-- Contenedor del contenido principal de la página -->
         <div class="content">
+            
+            <!-- Barra de navegación superior con menú y perfil del usuario -->
             <div class="top-navbar">
+                <!-- Ícono del menú que activa/desactiva la barra lateral en pantallas pequeñas -->
                 <div class="bx bx-menu" id="menu-icon"></div>
+                
+                <!-- Imagen de perfil del usuario que se muestra en la barra superior -->
                 <div class="profile">
-                    <img src="img/profile.jpg" alt="">
+                    <img src="img/profile.jpg" alt="Imagen de perfil del usuario">
                 </div>
             </div>
         </div>
     </div>
  
+    <!-- Enlace al archivo JavaScript externo para funcionalidades interactivas como el menú responsive -->
     <script src="main.js"></script>
  
 </body>
