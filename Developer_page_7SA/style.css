@@ -3,141 +3,250 @@
 
 /* Estilos generales para restablecer márgenes, rellenos y definir una fuente global */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño total del elemento */
-  list-style: none; /* Elimina los estilos de lista predeterminados */
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+  box-sizing: border-box;  /* Comentado: si se activa, incluye padding y border en el tamaño total del elemento */
+  list-style: none;  /* Comentado: elimina los estilos de lista predeterminados (viñetas) */
   text-decoration: none; /* Quita el subrayado de los enlaces */
   font-family: "Poppins", sans-serif; /* Define la fuente principal */
+  text-align: center; /* Alinea el texto al centro */
+  overflow-x: hidden; /* Oculta el desbordamiento horizontal */
 }
 
 /* Estilos para el contenedor principal */
 .main {
-  width: 100%;
+  width: 100%; /* Ocupa el 100% del ancho disponible */
   background-color: #fff; /* Fondo blanco */
+  /* position: absolute; */ /* Comentado: si se activa, posiciona el elemento de manera absoluta */
 }
 
 /* Barra lateral de navegación */
 .side-navbar {
-  position: fixed; /* Se mantiene fija en la pantalla */
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  width: 260px; /* Ancho inicial de la barra */
-  background: #FFFF00; /* Color de fondo morado oscuro */
-  overflow: hidden; /* Evita el desbordamiento del contenido */
+  position: fixed; /* Fija la barra lateral en la pantalla */
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  width: 260px; /* Ancho inicial de la barra lateral */
+  background: #fce807; /* Color de fondo amarillo */
+  /*overflow: hidden;*/ /* Evita el desbordamiento del contenido */
   transition: 0.5s ease; /* Transición suave al cambiar de tamaño */
 }
 
 /* Lista dentro de la barra lateral */
 .side-navbar ul {
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 0; /* Alinea la lista en la parte superior */
+  left: 0; /* Alinea la lista a la izquierda */
+  width: 100%; /* Ancho del 50% del contenedor */
 }
 
 /* Elementos de la lista de navegación */
 .side-navbar ul li {
-  width: 100%;
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  /* Es para saber que tanto se va a pintar de blanco la barra de navegación */
 }
 
 /* Cambio de color de fondo al pasar el mouse sobre los elementos */
 .side-navbar ul li:hover {
-  background: #fff; /* Morado más claro */
+  background: #fff; /* Fondo blanco al pasar el mouse */
 }
 
 /* Primer elemento de la lista (logo o título) */
 .side-navbar ul li:first-child {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Margen inferior de 1 rem */
   background: none; /* Sin fondo */
 }
 
 /* Estilos de los enlaces dentro de la barra lateral */
 .side-navbar ul li a {
-  display: block;
-  width: 100%;
+  display: block; /* Convierte el enlace en un bloque */
+  width: 100%; /* Ancho del 150% del contenedor */
   display: flex; /* Alineación flexible de íconos y texto */
-  color: #fff; /* Color de texto blanco */
+  color: #000000; /* Color de texto negro */
 }
 
 /* Estilos de los iconos dentro de la barra lateral */
 .side-navbar ul li a .icon {
-  min-width: 60px;
-  display: block;
-  font-size: 25px; /* Tamaño del icono */
-  line-height: 60px;
-  height: 60px;
-  text-align: center; /* Alineación centrada */
+  min-width: 60px; /* Ancho mínimo del ícono */
+  display: block; /* Convierte el ícono en un bloque */
+  font-size: 25px; /* Tamaño del ícono */
+  line-height: 60px; /* Altura de línea igual a la altura del ícono */
+  height: 60px; /* Altura del ícono */
+  text-align: center; /* Alineación centrada del ícono */
 }
 
 /* Estilos del texto dentro de los enlaces de la barra lateral */
 .side-navbar ul li a .text {
-  display: block;
-  padding: 0 10px;
-  line-height: 60px;
-  height: 60px;
+  display: block; /* Convierte el texto en un bloque */
+  padding: 0 10px; /* Relleno interno horizontal */
+  line-height: 60px; /* Altura de línea igual a la altura del texto */
+  height: 60px; /* Altura del texto */
   white-space: nowrap; /* Evita el salto de línea */
 }
 
 /* Contenedor de contenido principal */
 .content {
-  position: absolute;
+  position: absolute; /* Posicionamiento relativo */
   width: calc(100% - 260px); /* Ajuste según el ancho de la barra lateral */
-  left: 260px; /* Desplazamiento hacia la derecha */
-  min-height: 100vh;
-  transition: 0.5s ease; /* Transición suave */
+  left: 280px; /* Desplazamiento hacia la derecha */
+  min-height: 100vh; /* Altura mínima del 100% de la ventana cuando se aciona el icono de menu y se expande*/
+  padding: 5px; /* Relleno interno */
+  display: flex; /* Flexbox para alineación flexible */
+  flex-direction: column; /* Dirección de columna */
+  justify-content: space-between; /* Espaciado entre elementos */
+  overflow: hidden; /* Oculta el desbordamiento */
+  /* transition: 0.5s ease; */ /* Comentado: transición suave */
 }
 
 /* Barra de navegación superior */
 .top-navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 7px 20px;
+  width: 91%; /* Ancho del 88% del contenedor */
+  display: flex; /* Flexbox para alineación flexible */
+  align-items: center; /* Alineación vertical al centro */
+  justify-content: space-between; /* Espaciado entre elementos */
+  padding: 7px 10px; /* Relleno interno */
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%); /* Sombra sutil */
 }
 
 /* Estilos para la imagen de perfil */
-.profile img {
+/* .profile img {
   width: 44px;
   height: 44px;
   object-fit: contain; /* Ajusta la imagen sin recortarla */
-  object-position: center; /* Centra la imagen */
-  border-radius: 50%; /* Hace la imagen redonda */
-  cursor: pointer;
-}
+/* object-position: center; /* Centra la imagen */
+/* border-radius: 50%; /* Hace la imagen redonda */
+/* cursor: pointer;
+} */
 
 /* Ícono del menú para pantallas pequeñas */
 #menu-icon {
-  font-size: 34px;
-  cursor: pointer;
+  font-size: 34px; /* Tamaño del ícono */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 
 /* Estilos cuando el contenido está activo (barra lateral minimizada) */
 .content.active {
-  width: calc(100% - 60px);
-  left: 60px;
+  width: calc(100% - 60px); /* Ajuste del ancho */
+  left: 60px; /* Desplazamiento hacia la derecha */
 }
 
 /* Estilos cuando la barra lateral está minimizada */
 .side-navbar.active {
-  width: 60px;
+  width: 60px; /* Ancho reducido */
+}
+
+/* Pie de página con letras en la parte inferior */
+.footer {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: -600px; /* Se oculta inicialmente el pie de página */
+  width: 100%; /* Ancho del 100% del contenedor */
+  text-align: center; /* Alineación centrada del texto */
+  padding: 20px; /* Relleno interno */
+  background-color: #fce807; /* Color de fondo amarillo */
+  color: #000000; /* Color de texto negro */
+  font-size: 12px; /* Tamaño de la fuente */
+  /* transition: bottom 0.10s ease-in-out; */ /* Comentado: transición suave */
 }
 
 /* Estilos responsivos para pantallas más pequeñas */
 @media (max-width: 768px) {
   .content {
-    width: 100%;
-    left: 0;
+    width: 100%; /* Ancho del 100% del contenedor */
+    left: 0; /* Sin desplazamiento */
   }
+
   .side-navbar {
-    width: 60px;
+    width: 60px; /* Ancho reducido */
     left: -60px; /* Oculta la barra lateral */
   }
+
   .content.active {
-    width: calc(100% - 60px);
-    left: 60px;
+    width: calc(100% - 60px); /* Ajuste del ancho */
+    left: 60px; /* Desplazamiento hacia la derecha */
   }
+
   .side-navbar.active {
     left: 0; /* Muestra la barra lateral cuando está activa */
   }
+}
+
+/* Contenedor de productos */
+.contennido {
+  display: flex; /* Flexbox para alineación flexible */
+  flex-wrap: wrap; /* Envuelve los elementos en múltiples líneas */
+  gap: 20px; /* Espacio entre elementos */
+  justify-content: center; /* Alineación centrada */
+}
+
+/* Estilos para las tarjetas de productos */
+.card {
+  width: 45%; /* Ancho del 45% del contenedor */
+  margin: 3px; /* Margen exterior */
+  display: inline-block; /* Muestra las tarjetas en línea */
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el desbordamiento */
+  background: #fce807; /* Color de fondo amarillo */
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  cursor: default; /* Cursor predeterminado */
+  transition: all 400ms ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre las tarjetas */
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(210, 206, 206, 0.4); /* Sombra más pronunciada */
+  transform: translateY(-3%); /* Desplazamiento hacia arriba */
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.card img {
+  width: 150px; /* Ancho de la imagen */
+  height: 180px; /* Altura de la imagen */
+}
+
+/* Contenido dentro de las tarjetas */
+.card .contennido {
+  padding: 15px; /* Relleno interno */
+  text-align: center; /* Alineación centrada del texto */
+}
+
+/* Estilos para los párrafos dentro de las tarjetas */
+.card .contennido p {
+  line-height: 1.5; /* Altura de línea */
+  color: rgb(234, 227, 227); /* Color de texto gris claro */
+}
+
+/* Estilos para los títulos dentro de las tarjetas */
+.card .contennido h3 {
+  margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Estilos para los enlaces dentro de las tarjetas */
+.card .contennido a {
+  text-decoration: none; /* Quita el subrayado */
+  display: inline-block; /* Muestra el enlace en línea */
+  padding: 10px; /* Relleno interno */
+  margin-top: 10px; /* Margen superior */
+  color: #ffffff; /* Color de texto blanco */
+  border: 1px solid #e6e1e1; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: all 400ms ease; /* Transición suave */
+}
+
+/* Estilos para el contenedor de productos */
+.contenedor {
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Recuadro superior */
+.recuadro-superior {
+  width: 88%; /* Ancho del 88% del contenedor */
+  background-color: #ffffff; /* Color de fondo blanco */
+  padding: 5px; /* Relleno interno */
+  text-align: center; /* Alineación centrada del texto */
+  border-bottom: 5px solid #010101; /* Borde inferior negro */
+  position: sticky; /* Mantiene el recuadro fijo en la parte superior */
+  top: 5px; /* Lo fija en la parte superior de la ventana */
+  z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilos para los íconos de material */
+.material-symbols-outlined {
+  overflow: hidden; /* Oculta el desbordamiento */
 }

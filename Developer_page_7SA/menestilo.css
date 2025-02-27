@@ -1,0 +1,295 @@
+/* Importación de la fuente Poppins desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Estilos generales para restablecer márgenes, rellenos y definir una fuente global */
+* {
+  margin: 2;
+  padding: 0;
+  box-sizing: border-box;
+  /* Asegura que padding y border no afecten el tamaño total del elemento */
+  list-style: none; /* Elimina los estilos de lista predeterminados*/
+  text-decoration: none;
+  /* Quita el subrayado de los enlaces */
+  font-family: "Poppins", sans-serif;
+  /* Define la fuente principal */
+  text-align: center;
+  
+}
+
+/* Estilos para el contenedor principal */
+.main {
+  width: 100%;
+  background-color: #fff;
+  /* fondo blanco */
+  position: absolute;
+  /*overflow:  hidden;*/
+}
+
+/* Barra lateral de navegación */
+.side-navbar {
+  position: fixed;
+  /* Se mantiene fija en la pantalla */
+  height: 100vh;
+  /* Ocupa toda la altura de la ventana */
+  width: 260px;
+  /* Ancho inicial de la barra */
+  background: #FFFF00;
+  /* Color de fondo amarillo */
+  overflow: hidden;
+  /* Evita el desbordamiento del contenido */
+  transition: 0.5s ease;
+  /* Transición suave al cambiar de tamaño */
+}
+
+/* Lista dentro de la barra lateral */
+.side-navbar ul {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Elementos de la lista de navegación */
+.side-navbar ul li {
+  width: 100%;
+  /*es para saber que tanto se va a pintar de blanco
+  la barra de navegacion */
+}
+
+/* Cambio de color de fondo al pasar el mouse sobre los elementos */
+.side-navbar ul li:hover {
+  background: #fff;
+  /* blanco*/
+}
+
+/* Primer elemento de la lista (logo o título) */
+.side-navbar ul li:first-child {
+  margin-bottom: 1rem;
+  background: none;
+  /* Sin fondo */
+}
+
+/* Estilos de los enlaces dentro de la barra lateral */
+.side-navbar ul li a {
+  display: block;
+  width: 100%;
+  display: flex;
+  /* Alineación flexible de íconos y texto */
+  color: #000000;
+  /* Color de texto negro  */
+}
+
+/* Estilos de los iconos dentro de la barra lateral */
+.side-navbar ul li a .icon {
+  min-width: 55px;
+  display: block;
+  font-size: 25px;
+  /* Tamaño del icono */
+  line-height: 55px;
+  height: 60px;
+  text-align: center;
+  /* Alineación centrada */
+  
+}
+
+/* Estilos del texto dentro de los enlaces de la barra lateral */
+.side-navbar ul li a .text {
+  display: block;
+  padding: 0 10px;
+  line-height: 55px;
+  height: 55px;
+  white-space: nowrap;
+  /* Evita el salto de línea */
+}
+
+.side-navbar ul li a .co 
+{
+  line-height: 12px; /*este es independiente al de categorias para poder moverlo*/
+}
+
+/* Contenedor de contenido principal */
+.content {
+  position: absolute;
+  width: calc(100% - 260px); /*260px*/
+  /* Ajuste según el ancho de la barra lateral */
+  left: 260px;
+  /* Desplazamiento hacia la derecha */
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s ease;
+  /* Transición suave */
+}
+
+/* Barra de navegación superior */
+.top-navbar {
+  width: 80%;
+  position: relative;
+  margin:  auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  /* Sombra sutil */
+}
+
+/* Estilos para la imagen de perfil */
+/*.profile img 
+{
+  width: 44px;
+  height: 44px;
+  object-fit: contain; /* Ajusta la imagen sin recortarla */
+/*object-position: center; /* Centra la imagen */
+/*border-radius: 50%; /* Hace la imagen redonda */
+/*cursor: pointer;
+}
+
+/* Ícono del menú para pantallas pequeñas */
+#menu-icon {
+  font-size: 34px;
+  cursor: pointer;
+}
+
+/* Estilos cuando el contenido está activo (barra lateral minimizada) */
+.content.active {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+/* Estilos cuando la barra lateral está minimizada */
+.side-navbar.active {
+  width: 60px;
+}
+
+/* Pie de página con letras en la parte inferior */
+.footer {
+  position: absolute;
+  bottom: -888px;
+  /*se oculta inicialmente el pie de pag */
+  left: 20%;
+  width: 80%;
+  text-align: center;
+  padding: 1%;
+  background-color: #FFFF00;
+  color: #000000;
+  font-size: 12px;
+  /*transition: bottom 0.10s ease-in-out;*/
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    left: 0;
+  }
+
+  .side-navbar {
+    width: 60px;
+    left: -60px;
+    /* Oculta la barra lateral */
+  }
+
+  .content.active {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+
+  .side-navbar.active {
+    left: 0;
+    /* Muestra la barra lateral cuando está activa */
+  }
+
+  /*.IMG_20230430_093016
+{
+    /* "../"
+    para salir de una carpeta a otra  */
+  /*    background-image: url("../Developer_page_7SA/img/IMG_20230430_093016.jpg");
+    background-repeat: no-repeat;
+    /*background-size: ;*/
+  /* width: 30%;
+ /*   height: 30%;
+    /*cubre la imagen con el tamaño posible*/
+}
+
+.contennido
+/*contenido dentro del cuadro donde van los productos*/
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 88%;
+    /*display: flex;
+  max-width: 1100px;*/
+}
+
+.card
+
+/*estilos a las tarjetas */
+  {
+  width: 45%;
+  margin: 3px;
+  display: inline-block;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #FFFF00;
+  box-shadow: 0px 1px 10px rbba(0, 0, 0, 0.3);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.card:hover
+
+/* dar el efecto en como se levanta cada tarjeta del producto*/
+  {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+.card img
+
+/*para ajustar la imagen dentro de la tarjeta */
+  {
+  width: 15px;
+  height: 18px;
+}
+
+.card .contennido 
+{
+  padding: 150px;
+  text-align: center;
+}
+
+.card .contennido p {
+  line-height: 1.5;
+  color: black;
+}
+
+.card .contennido h3 {
+  margin-bottom: 15px;
+}
+
+.card .contennido a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  color: #000000;
+  border: 1 px solid #000000;
+  border-radius: 4px;
+  transition: all 400ms ease;
+}
+
+.card .contennido {
+  background: #000000;
+  color: #fff;
+}
+.contenedor
+{
+  text-align: center;
+}
+.material-symbols-outlined{
+  overflow: hidden;
+}

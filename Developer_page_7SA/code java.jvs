@@ -1,0 +1,31 @@
+	 
+let menu = document.querySelector('#menu-icon');
+let sidenavbar = document.querySelector('.side-navbar');
+let content = document.querySelector('.content');
+ 
+menu.onclick = () => {
+    sidenavbar.classList.toggle('active');
+    content.classList.toggle('active');
+}
+
+https://github.com/eduar-vivas/Web-Programming.git
+
+            <div class="producto"> <!--agregando productos o varias cosas o servicios -->
+                <img src="../Developer_page_7SA/img/IMG_20230430_093016.jpg" alt="mouse" width="80" height="80">
+                <h2>Mouse Gamer</h2>
+                <p>Mouse gamer con buena orecision para todo tipo de juegos </p>
+                <p>Precio: $250</p>
+            </div>
+
+            <style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
