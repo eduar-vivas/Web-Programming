@@ -1,0 +1,73 @@
+body 
+{
+    margin: 0; /*Que no haya margin y padding que da el navegador default para que
+    nosotros lo manipulemos más adelante*/
+    padding: 0;
+    font-size: 13 px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header 
+{
+    width: 100%; /*Para que el header ocupe todo el ancho de la pantalla*/
+    height: 60px;
+}
+/*Busca una etiqueta nav que esté dentro de la etiqueta header*/
+header nav 
+{
+    display: flex;
+    justify-content: flex-end;
+}
+header nav .nav-right-section
+{
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none; /* Para quitar los puntos de la lista */
+    justify-content: center;
+    align-items: center;
+}
+nav .nav-right-section a
+{
+    margin-right: 10px; /*Espacio entre los enlaces*/
+    color: #000000; /*Color de los enlaces*/
+}
+a
+{
+    text-decoration: none; /*Quitar el subrayado de los enlaces*/
+    cursor: pointer; /*Cambiar el cursor al pasar por encima de los enlaces*/
+}
+nav .nav-right-section .menu-icon
+{
+    background-image: url("https://static.thenounproject.com/png/756729-200.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*Tamaño del icono*/
+    width: 25px; /*Tamaño del icono*/
+    height: 25px; /*Tamaño del icono*/    
+}
+nav .nav-right-section img
+{
+    border-radius: 50%; /*Para que la imagen sea redonda*/
+    margin-left: 10px; /*Espacio entre la imagen y el icono*/
+}
+main{
+    margin-top: 150px; /*Para que el main no esté pegado al header*/
+    text-align: center; /*Para que el texto esté centrado*/   
+}
+
+main .main-logo{
+    width: 530px; /*Tamaño del logo*/
+    margin: 0 auto; /*Para centrar el logo*/
+    margin-bottom: 35px; /*Espacio entre el logo y el texto*/
+}
+main .main-logo img{
+    height: 92px;
+    width: 272px;
+}
+
+main .main-input{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px; /*Espacio entre el input y el botón*/
+}
+
