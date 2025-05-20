@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body 
+{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header nav 
+{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+}
+
+header nav a 
+{
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+
+header nav button 
+{
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
