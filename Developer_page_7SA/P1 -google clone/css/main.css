@@ -55,19 +55,85 @@ main{
     text-align: center; /*Para que el texto esté centrado*/   
 }
 
-main .main-logo{
+main .main-logo
+{
     width: 530px; /*Tamaño del logo*/
     margin: 0 auto; /*Para centrar el logo*/
     margin-bottom: 35px; /*Espacio entre el logo y el texto*/
 }
-main .main-logo img{
+main .main-logo img
+{
     height: 92px;
     width: 272px;
 }
 
-main .main-input{
+main .main-input
+{
     width: 530px;
     margin: 0 auto;
     margin-bottom: 35px; /*Espacio entre el input y el botón*/
 }
+main .main-input-container
+{
+    width: 525px;
+    border-radius: 100px; /*Para que el input tenga bordes redondeados*/
+    border: 1px solid #dfe1e5; /*Borde del input*/
+    display: flex;
+    justify-content: center; /*Para centrar el input*/
+    align-items: center; /*Para centrar el input*/
+}
 
+main .main-input input
+{
+    width: 450px;
+    height: 40px;
+    border: none; /*Para quitar el borde del input*/
+    outline: none; /*Para quitar el borde del input*/
+}
+main .main-input .search-icon
+{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*Tamaño del icono*/
+    width: 18px; /*Tamaño del icono*/
+    height: 18px; /*Tamaño del icono*/
+}
+main .main-input .micro-icon
+{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*Tamaño del icono*/
+    width: 18px; /*Tamaño del icono*/
+    height: 18px; /*Tamaño del icono*/
+    cursor: pointer; /*Cambiar el cursor al pasar por encima del icono*/
+}
+main .main-buttons
+{
+    width: 530px; /*Tamaño del contenedor de los botones*/
+    margin: 0 auto; /*Para centrar el contenedor de los botones*/
+}
+
+main .main-buttons div
+{
+    display: inline-block; /*Para que los botones estén uno al lado del otro*/
+}
+
+main .main-buttons button{
+    height: 36px;   /*Tamaño del botón*/
+    background-color: #f2f2f2; /*Color de fondo del botón*/
+    border: 0; /*Para quitar el borde del botón*/
+    font-size: 14px; /*Tamaño de la fuente del botón*/
+    color: #5f6368;
+    border-radius: 5px; /*Para que el botón tenga bordes redondeados*/
+    padding: 0 15px; /*Espacio entre el texto y el borde del botón*/
+    margin-right: 15px; /*Espacio entre los botones*/
+}
+
+main .main-buttons button:hover
+{
+    border: 1px solid #c6c6c6; /*Borde del botón al pasar el ratón por encima*/
+    box-shadow: 0 1px 1px #000001; /*Sombra del botón al pasar el ratón por encima*/
+    color: #222;
+}
